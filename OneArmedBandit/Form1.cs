@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+//Jasmine Josan
+//October 2022
+//One Armed Bandit casino game
+
 namespace OneArmedBandit
 {
     public partial class Form1 : Form
     {
         // random number generator
+        Random randGen = new Random();  
 
         // int value for score initialized to 10
-
+        int score = 10;
 
         public Form1()
         {
