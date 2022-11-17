@@ -95,17 +95,27 @@ namespace OneArmedBandit
 
             if (reel1 == reel2 && reel2 == reel3)
             {
-                score++;
-                scoreDisplay.Text = $"{score}";
+                score = score + 3;
+              
                 outputLabel.Text = "Winner!!!";
+            }
+            else
+            {
+                score--;
+               
+                outputLabel.Text = "Play Again.";
             }
 
 
             // if score has reached 0 display "lose" message and set button enabled property to false
-
+            if (score == 0)
+            {
+                outputLabel.Text = "Lose";
+                spinButton.Enabled = false;
+            }
 
             // display updated score
-
+            scoreDisplay.Text = $"{score}";
         }
     }
 }
